@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>JS Adaptive Learning — Aprendé JavaScript a tu ritmo</title>
+    <meta
+      name="description"
+      content="Curso interactivo de JavaScript que se adapta en tiempo real a cómo vas aprendiendo: contenido, dificultad y pistas ajustados según tus aciertos y errores. Editor de código real, quizzes y seguimiento de progreso."
+    />
+
+    <!-- Favicon: SVG como formato principal (escala perfecto, pesa casi
+         nada) con fallback PNG para navegadores que todavía no soportan
+         favicons SVG. -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#6366f1" />
+
+    <!-- Open Graph / Twitter Card: preview al compartir el link (LinkedIn,
+         Twitter/X, WhatsApp, Slack, etc.). Reemplazá og:url por el dominio
+         real una vez desplegado — el resto ya funciona tal cual. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="JS Adaptive Learning — Aprendé JavaScript a tu ritmo" />
+    <meta
+      property="og:description"
+      content="Curso interactivo de JavaScript que se adapta en tiempo real a cómo vas aprendiendo: contenido, dificultad y pistas ajustados según tus aciertos y errores."
+    />
+    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://tu-dominio-aca.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="JS Adaptive Learning — Aprendé JavaScript a tu ritmo" />
+    <meta
+      name="twitter:description"
+      content="Curso interactivo de JavaScript que se adapta en tiempo real a cómo vas aprendiendo."
+    />
+    <meta name="twitter:image" content="/og-image.png" />
+
+    <script>
+      // Aplica el tema guardado (o la preferencia del sistema como fallback)
+      // ANTES de que se pinte el primer frame. Si esto se hiciera desde React
+      // (con un useEffect), habría un flash inicial del tema por defecto
+      // seguido de un salto al tema real guardado — visible y molesto en
+      // cada carga. Un script inline y sincrónico en el <head> evita eso.
+      (function () {
+        try {
+          var saved = localStorage.getItem('adaptive-learning-theme');
+          var theme =
+            saved === 'light' || saved === 'dark'
+              ? saved
+              : window.matchMedia('(prefers-color-scheme: light)').matches
+              ? 'light'
+              : 'dark';
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          // localStorage inaccesible (modo privado estricto, etc.) — se
+          // queda con el tema oscuro por defecto que ya define styles.css.
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
