@@ -1161,17 +1161,32 @@ html, body, #root {
 }
 
 /* ─── Certificate ─────────────────────────────────────────────────────────────── */
+/* El botón de descarga y el header quedan siempre visibles (flex-shrink: 0);
+   el scroll, si hace falta, vive únicamente en certificate-preview. Antes el
+   overflow-y: auto estaba en la card entera, así que en viewports bajos
+   (sobre todo mobile, donde 92vh no descuenta la barra de direcciones del
+   navegador) el botón podía quedar fuera del área visible sin ninguna señal
+   de que hacía falta scrollear. */
 .certificate-modal-card {
-  width: 100%; max-width: 720px; max-height: 92vh; overflow-y: auto;
+  width: 100%; max-width: 720px;
+  max-height: 92vh; max-height: 92dvh;
   background: var(--bg-elevated);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   padding: 24px;
   display: flex; flex-direction: column; gap: 16px;
   box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  overflow: hidden;
+}
+.certificate-modal-card > .badges-panel-header,
+.certificate-modal-card > .certificate-error,
+.certificate-modal-card > .btn-primary {
+  flex-shrink: 0;
 }
 .certificate-preview {
-  width: 100%; border-radius: var(--radius-md); overflow: hidden;
+  width: 100%; flex: 1 1 auto; min-height: 0;
+  border-radius: var(--radius-md);
+  overflow-x: hidden; overflow-y: auto;
   border: 1px solid var(--border-subtle);
   line-height: 0; /* evita un renglón de espacio fantasma debajo del svg inline */
 }
