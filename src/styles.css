@@ -1384,7 +1384,6 @@ html, body, #root {
   background: var(--bg-elevated);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
-  overflow: hidden;
 }
 .course-complete-confetti {
   position: absolute; inset: 0; pointer-events: none; overflow: hidden;
