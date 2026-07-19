@@ -8,7 +8,7 @@
 
 ### 🔗 [Ver demo en vivo](https://adaptative-learning.vercel.app/)
 
-![Landing page](docs/adaptativeLanding.png)
+![Landing page](docs/adaptativeLanding.png)(https://adaptative-learning.vercel.app/)
 
 Curso interactivo de **JavaScript y TypeScript** con un motor de adaptación
 real: el contenido, la dificultad y las pistas se ajustan en tiempo real
