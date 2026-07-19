@@ -47,7 +47,7 @@ explicable en cualquier momento.
 
 ## Cómo funciona el motor adaptativo
 
-![Diagrama de arquitectura del motor adaptativo](docs/architecture.svg)
+![Diagrama de arquitectura del motor adaptativo](docs/architecture2.svg)
 
 El motor **no sabe nada sobre JavaScript ni TypeScript específicamente** —
 por eso el mismo código sirve para ambos cursos sin ningún cambio. El
