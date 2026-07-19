@@ -1,6 +1,5 @@
 # JS Adaptive Learning
 
-[![CI](https://github.com//Adaptative-learning/actions/workflows/ci.yml/badge.svg)](https://github.com/Cristian910/Adaptative-learning/actions/workflows/ci.yml)
 ![Tests](https://img.shields.io/badge/tests-186%20passing-brightgreen)
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-blue)
 ![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey)
@@ -8,7 +7,7 @@
 
 ### 🔗 [Ver demo en vivo](https://adaptative-learning.vercel.app/)
 
-![Landing page](docs/adaptativeLanding.png)(https://adaptative-learning.vercel.app/)
+[![Landing page](docs/adaptativeLanding.png)](https://adaptative-learning.vercel.app/)
 
 Curso interactivo de **JavaScript y TypeScript** con un motor de adaptación
 real: el contenido, la dificultad y las pistas se ajustan en tiempo real
